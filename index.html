@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Всем привет!</title>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
     <header class="header" data-test="header">
         <nav>
-          <a href="#">
+          <a class="sedona-logo" href="#">
             <img src="./images/sedona-logo.svg" alt="Логотип города Седона" width="138" height="64">
           </a>
-          <ul>
+          <ul class="navigation-list">
             <li>
-              <a href="#"></a>
+              <a href="#">Главная</a>
             </li>
             <li>
               <a href="#">О Седоне</a>
@@ -21,7 +22,7 @@
               <a href="./catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul>
+          <ul class="user-list">
             <li>
               <a href="./catalog.html">
                 <span class="visually-hidden">Найти гостиницу</span>
@@ -34,7 +35,7 @@
               </a>
             </li>
           </ul>
-          <a class="navigation-button button button-brown" href="#">Хочу сюда!</a>
+          <a class="header-button button button-brown" href="#">Хочу сюда!</a>
         </nav>
     </header>
     <main class="main" data-test="main">
@@ -42,8 +43,9 @@
 
       <section class="hero" data-test="hero">
         <div class="hero-wrapper">
-          <img src="./images/index-background.jpg" alt="Прекрасный горный пейзаж, встречающий посетителя" width="1200" height="485">
-          <img src="./images/welcome.jpg" alt="Welcome to the gorgeus Sedona!" width="458" height="352">
+          <div class="hero-divider">
+            <img class="hero-welcome" src="./images/index/hero-welcome.svg" alt="Welcome to the gorgeus Sedona!" width="458" height="352">
+          </div>
         </div>
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -55,7 +57,7 @@
           <li>
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="./images/advantages-1.jpg" alt="Здание муниципалитета" width="800" height="385">
+            <img src="./images/index/advantages-1.jpg" alt="Здание муниципалитета" width="800" height="385">
           </li>
           <li>
             <h3>Небольшая площадь</h3>
@@ -72,7 +74,7 @@
           <li>
             <h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="./images/advantages-2.jpg" alt="Мост дьявола" width="800" height="385">
+            <img src="./images/index/advantages-2.jpg" alt="Мост дьявола" width="800" height="385">
           </li>
         </ul>
       </section>
@@ -80,16 +82,16 @@
       <section class="service">
         <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p>Опытный персонал и качественное обслуживание!</p>
-        <ul>
-          <li>
+        <ul class="service-list">
+          <li class="service-item">
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li>
+          <li class="service-item service-item_active">
             <h3>Еда</h3>
             <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li>
+          <li class="service-item">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -97,14 +99,14 @@
       </section>
 
       <section class="search" data-test="search">
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <h2 class="title">Заинтересовались?</h2>
+        <p class="subtitle">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a href="#">Поиск гостиницы в Седоне</a>
       </section>
 
       <section class="subscribe" data-test="subscribe">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="title">Подпишитесь на рассылку</h2>
+        <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form method="post" action="https://echo.htmlacademy.ru/">
           <input type="email" name="subscribe" id="subscribe-input">
           <label for="subscribe-input">Ваш e-mail</label>
@@ -113,27 +115,27 @@
       </section>
     </main>
     <footer class="footer" data-test="footer">
-      <ul>
-        <li>
-          <a class="social-link" href="https://vk.com/htmlacademy" target="_blank">
-            <img src="./images/vk-social-icon.svg" alt="Вконтакте" width="16" height="14">
+      <ul class="social-list">
+        <li class="social-item">
+          <a class="social-link social-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li>
-          <a class="social-link" href="https://t.me/htmlacademy" target="_blank">
-            <img src="./images/tg-social-icon.svg" alt="Телеграмм" width="16" height="14">
+        <li class="social-item">
+          <a class="social-link social-telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Телеграмм</span>
           </a>
         </li>
-        <li>
-          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-            <img src="./images/youtube-social-icon.svg" alt="Youtube" width="16" height="14">
+        <li class="social-item">
+          <a class="social-link social-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Youtube</span>
           </a>
         </li>
       </ul>
       <address class="phone">
         <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
-      <a class="developer-logo" href="https://htmlacademy.ru/study" target="_blank">
+      <a class="developer-logo" href="https://htmlacademy.ru/study" target="_blank" rel="noreferrer noopener">
         <img src="./images/developer-logo.svg" alt="Сайт разработчика" width="115" height="33">
       </a>
     </footer>
