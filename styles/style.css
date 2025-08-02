@@ -14,6 +14,66 @@
   font-display: swap;
 }
 
+.visually-hidden {
+  display: none;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  color: var(--basic-normal-dark);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  /* margin: 0; */
+}
+
+:root {
+  --basic-extra-dark: #000000;
+  --basic-normal-dark: #333333;
+  --total-white: #FFFFFF;
+}
+
+.font-super-title {
+  /* color: var(--total-white); */
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.font-main-title {
+  color: var(--basic-extra-dark);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.font-main-subtitle {
+  color: var(--basic-normal-dark);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.font-mini-title {
+  color: var(--basic-extra-dark);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* .font-tiny-text {
+  color: var(--basic-normal-dark);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+} */
+
 /* index.html HERO */
 
 .hero-wrapper {
@@ -31,11 +91,23 @@
   transform: translate(371px, 51px);
 }
 
+/* index.html ADVANTAGES */
+
+.advantages-item__title {
+  text-transform: uppercase;
+}
+
 /* index.html SERVICE */
 
-/* .service-item:nth-child(1) {
-  background: url('../images/index/service-house.svg') no-repeat;
-} */
+/* SUBSCRIBE */
+
+.subscribe {
+  min-height: 415px;
+}
+
+.subscribe_with {
+  background: url('../images/subscribe-background.jpg');
+}
 
 /* FOOTER */
 
@@ -66,4 +138,24 @@
 
 .social-youtube::before {
   mask-image: url('../images/youtube-social-icon.svg');
+}
+
+/* catalog.html CATALOG*/
+
+.vision-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.tile-link {
+  background: url('../images/catalog/vision-card-icon.svg') no-repeat;
+}
+
+.card-link {
+  background: url('../images/catalog/vision-list-icon.svg') no-repeat;
+}
+
+.list-link {
+  background: url('../images/catalog/vision-tile-icon.svg') no-repeat;
 }

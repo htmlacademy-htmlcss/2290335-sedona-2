@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
       </nav>
   </header>
   <main class="main" data-test="main">
-    <h1>Гостиницы Седоны</h1>
+    <h1 class="font-super-title">Гостиницы Седоны</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр</h2>
       <ul class="breadcrumbs-list">
@@ -118,27 +119,25 @@
     <section class="catalog">
       <h2 class="visually-hidden">Список вариантов</h2>
       <div class="top-information">
-        <div>Найдено гостиниц: 38</div>
-        <form method="post" action="https://echo.htmlacademy.ru/">
+        <div class="font-main-title">Найдено гостиниц: 38</div>
           <select name="priority" id="priority" aria-label="Сортировка">
             <option value="cheap-first">Сначала дешевые</option>
             <option value="rich-first">Сначала роскошные</option>
           </select>
-        </form>
-        <ul class="representation-list">
+        <ul class="vision-list">
           <li>
-            <a href="catalog.html?view=tile">
-              <img src="./images/catalog/reprentation-tile-icon.svg" alt="Плитка">
+            <a class="vision-link tile-link" href="catalog.html?view=tile">
+              <span class="visually-hidden">Плитка</span>
             </a>
           </li>
           <li>
-            <a href="catalog.html?view=card">
-              <img src="./images/catalog/representation-card-icon.svg" alt="Карточки">
+            <a class="vision-link card-link" href="catalog.html?view=card">
+              <span class="visually-hidden">Карточки</span>
             </a>
           </li>
           <li>
-            <a href="catalog.html?view=list">
-              <img src="./images/catalog/representation-list-icon.svg" alt="Список">
+            <a class="vision-link list-link" href="catalog.html?view=list">
+              <span class="visually-hidden">Список</span>
             </a>
           </li>
         </ul>
@@ -150,7 +149,7 @@
             <img src="./images/catalog/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212">
           </a>
           <a href="#">
-            <h3>Amara Resort & Spa</h3>
+            <h3 class="font-mini-title">Amara Resort & Spa</h3>
           </a>
           <div class="card-info">
             <span>Гостиница</span>
@@ -170,7 +169,7 @@
             <img src="./images/catalog/hotel-2.jpg" alt="Villas at Poco Diablo" width="300" height="212">
           </a>
           <a href="#">
-            <h3>Villas at Poco Diablo</h3>
+            <h3 class="font-mini-title">Villas at Poco Diablo</h3>
           </a>
           <div class="card-info">
             <span>Гостиница</span>
@@ -190,7 +189,7 @@
             <img src="./images/catalog/hotel-3.jpg" alt="Desert Quail Inn" width="300" height="212">
           </a>
           <a href="#">
-            <h3>Desert Quail Inn</h3>
+            <h3 class="font-mini-title">Desert Quail Inn</h3>
           </a>
           <div class="card-info">
             <span>Гостиница</span>
@@ -210,7 +209,7 @@
             <img src="./images/catalog/hotel-4.jpg" alt="GreenTree Inn" width="300" height="212">
           </a>
           <a href="#">
-            <h3>GreenTree Inn</h3>
+            <h3 class="font-mini-title">GreenTree Inn</h3>
           </a>
           <div class="card-info">
             <span>Гостиница</span>
@@ -249,8 +248,8 @@
     </section>
 
     <section class="subscribe" data-test="subscribe">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="font-main-title">Подпишитесь на рассылку</h2>
+        <p class="font-main-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form method="post" action="https://echo.htmlacademy.ru/">
           <input type="email" name="subscribe" id="subscribe-input">
           <label for="subscribe-input">Ваш e-mail</label>
