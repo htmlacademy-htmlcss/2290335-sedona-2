@@ -99,6 +99,30 @@ body {
 
 /* index.html SERVICE */
 
+.service-house::before {
+  content: "";
+  display: block;
+  background: url('../images/index/service-house.svg');
+  width: 75px;
+  height: 72px;
+}
+
+.service-food::before {
+  content: "";
+  display: block;
+  background: url('../images/index/service-food.svg');
+  width: 74px;
+  height: 70px;
+}
+
+.service-gift::before {
+  content: "";
+  display: block;
+  background: url('../images/index/service-gift.svg');
+  width: 64px;
+  height: 76px;
+}
+
 /* SUBSCRIBE */
 
 .subscribe {
@@ -106,7 +130,7 @@ body {
 }
 
 .subscribe_with {
-  background: url('../images/subscribe-background.jpg');
+  background: url('../images/subscribe-background.jpg') no-repeat;
 }
 
 /* FOOTER */
@@ -138,6 +162,13 @@ body {
 
 .social-youtube::before {
   mask-image: url('../images/youtube-social-icon.svg');
+}
+
+/* catalog.html FILTER */
+
+.filter {
+  min-width: 1200px;
+  background: url('../images/catalog/filter-background.jpg') no-repeat;
 }
 
 /* catalog.html CATALOG*/
