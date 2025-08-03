@@ -14,23 +14,23 @@
           </a>
           <ul class="navigation-list">
             <li>
-              <a href="#">Главная</a>
+              <a class="navigation-link" href="#">Главная</a>
             </li>
             <li>
-              <a href="#">О Седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li>
-              <a href="./catalog.html">Гостиницы</a>
+              <a class="navigation-link" href="./catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-list">
             <li>
-              <a href="./catalog.html">
+              <a class="user-link" href="./catalog.html">
                 <span class="visually-hidden">Найти гостиницу</span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="user-link" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favorite-bandage">12</span>
               </a>
@@ -39,6 +39,7 @@
           <a class="header-button button button-brown" href="#">Хочу сюда!</a>
         </nav>
     </header>
+
     <main class="main" data-test="main">
       <h1 class="visually-hidden">Седона. Главная страница</h1>
 
@@ -56,7 +57,7 @@
         <p class="font-main-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item_big">
             <h3 class="advantages-item__title font-mini-title">Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             <img src="./images/index/advantages-1.jpg" alt="Здание муниципалитета" width="800" height="385">
@@ -73,7 +74,7 @@
             <h3 class="font-mini-title">Мало туристов</h3>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item_big">
             <h3 class="font-mini-title">Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             <img src="./images/index/advantages-2.jpg" alt="Мост дьявола" width="800" height="385">
@@ -103,7 +104,7 @@
       <section class="search" data-test="search">
         <h2 class="font-main-title">Заинтересовались?</h2>
         <p class="font-main-subtitle">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#">Поиск гостиницы в Седоне</a>
+        <a class="search-button button button-brown" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
       <section class="subscribe subscribe_with" data-test="subscribe">
@@ -112,7 +113,7 @@
         <form method="post" action="https://echo.htmlacademy.ru/">
           <input type="email" name="subscribe" id="subscribe-input">
           <label for="subscribe-input">Ваш e-mail</label>
-          <button type="submit">Подписаться</button>
+          <button class="button button-blue" type="submit">Подписаться</button>
         </form>
       </section>
     </main>

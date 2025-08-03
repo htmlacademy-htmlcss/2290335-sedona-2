@@ -31,10 +31,12 @@ body {
   --basic-extra-dark: #000000;
   --basic-normal-dark: #333333;
   --total-white: #FFFFFF;
+  --basic-normal-green: #7DB54F;
+  --basic-normal-brown: #756157;
+  --basic-normal-blue: #82B3D3;
 }
 
 .font-super-title {
-  /* color: var(--total-white); */
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -67,6 +69,25 @@ body {
   margin: 0;
 }
 
+.button {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  width: fit-content;
+  border-radius: 4px;
+}
+
+.button-brown {
+  background-color: var(--basic-normal-brown);
+  color: var(--total-white);
+}
+
+.button-blue {
+  background-color: var(--basic-normal-blue);
+  color: var(--total-white);
+}
+
 /* .font-tiny-text {
   color: var(--basic-normal-dark);
   font-weight: 400;
@@ -97,9 +118,16 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-item {
+ text-align: center;
+}
+
+.advantages-item_big {
+  background-color: var(--basic-normal-blue);
+}
 /* index.html SERVICE */
 
-.service-house::before {
+/* .service-house::before {
   content: "";
   display: block;
   background: url('../images/index/service-house.svg');
@@ -121,7 +149,7 @@ body {
   background: url('../images/index/service-gift.svg');
   width: 64px;
   height: 76px;
-}
+} */
 
 /* SUBSCRIBE */
 
@@ -131,6 +159,33 @@ body {
 
 .subscribe_with {
   background: url('../images/subscribe-background.jpg') no-repeat;
+}
+
+/* HEADER */
+
+.navigation-link {
+  text-decoration: none;
+  color: var(--basic-extra-dark);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.user-link {
+  text-decoration: none;
+}
+
+.favorite-bandage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--basic-normal-green);
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 10px;
+  color: var(--total-white);
 }
 
 /* FOOTER */
@@ -169,8 +224,28 @@ body {
 .filter {
   min-width: 1200px;
   background: url('../images/catalog/filter-background.jpg') no-repeat;
+  background-size: cover;
+  color: var(--total-white);
 }
 
+.breadcrumbs-link {
+  text-decoration: none;
+  color: var(--total-white);
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-legend {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.infrastructure-list, .accommodation-list {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
 /* catalog.html CATALOG*/
 
 .vision-link {
@@ -189,4 +264,19 @@ body {
 
 .list-link {
   background: url('../images/catalog/vision-tile-icon.svg') no-repeat;
+}
+
+.card-name {
+  text-decoration: none;
+}
+
+.pagination-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-item_current {
+  color: var(--basic-extra-dark);
 }
