@@ -26,12 +26,12 @@
           </ul>
           <ul class="user-list">
             <li>
-              <a class="user-link" href="./catalog.html">
+              <a class="glass-link user-link" href="./catalog.html">
                 <span class="visually-hidden">Найти гостиницу</span>
               </a>
             </li>
             <li>
-              <a class="user-link" href="#">
+              <a class="heart-link user-link" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favorite-bandage">12</span>
               </a>
@@ -44,17 +44,17 @@
   <main class="main" data-test="main">
     <h1 class="visually-hidden">Гостиницы Седоны</h1>
     <section class="filter" data-test="filter">
-      <h2 class="font-super-title">Гостиницы Седоны</h2>
+      <h2 class="font-super-heading">Гостиницы Седоны</h2>
       <ol class="breadcrumbs-list">
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#"></a>
         </li>
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Гостиницы</a>
         </li>
       </ol>
-      <form method="get" action="https://echo.htmlacademy.ru/">
-        <fieldset>
+      <form class="catalog-form" method="get" action="https://echo.htmlacademy.ru/">
+        <fieldset class="infrastructure-fieldset catalog-fieldset">
           <legend class="filter-legend">Инфраструктура:</legend>
           <ul class="infrastructure-list">
             <li>
@@ -77,7 +77,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="accommodation-fieldset catalog-fieldset">
           <legend class="filter-legend">Тип жилья:</legend>
           <ul class="accommodation-list">
             <li>
@@ -100,35 +100,36 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="cost-fieldset catalog-fieldset">
           <legend class="filter-legend">Стоимость, ₽:</legend>
           <label class="cost-control">
-            <span>От</span>
+            <span class="cost-name">От</span>
             <input type="number" name="high-cost" value="0">
           </label>
           <label class="cost-control">
-            <span>До</span>
+            <span class="cost-name">До</span>
             <input type="number" name="low-cost" value="9000">
           </label>
         </fieldset>
         <div class="filter-buttons">
-          <button class="button button-blue" type="submit">Применить</button>
-          <button class="reset-button button" type="reset">Сбросить</button>
+          <button class="filter-submit-button button-blue button" type="submit">Применить</button>
+          <button class="filter-reset-button button-transparent button" type="reset">Сбросить</button>
         </div>
       </form>
     </section>
 
     <section class="catalog" data-test="catalog">
       <h2 class="visually-hidden">Список вариантов</h2>
-      <div class="top-information">
-        <div class="font-main-title">Найдено гостиниц: 38</div>
-          <select name="priority" id="priority" aria-label="Сортировка">
-            <option value="cheap-first">Сначала дешевые</option>
-            <option value="rich-first">Сначала роскошные</option>
-          </select>
+
+      <div class="toolbar">
+        <div class="toolbar-result">Найдено гостиниц: 38</div>
+        <select class="filter-select" name="priority" id="priority" aria-label="Сортировка">
+          <option value="cheap-first">Сначала дешевые</option>
+          <option value="rich-first">Сначала роскошные</option>
+        </select>
         <ul class="vision-list">
           <li>
-            <a class="vision-link tile-link" href="catalog.html?view=tile">
+            <a class="vision-link tile-link vision-link_active" href="catalog.html?view=tile">
               <span class="visually-hidden">Плитка</span>
             </a>
           </li>
@@ -145,8 +146,8 @@
         </ul>
       </div>
 
-      <ul class="product-list">
-        <li>
+      <ul class="cards-list">
+        <li class="card">
           <a href="#">
             <img src="./images/catalog/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212">
           </a>
@@ -166,7 +167,7 @@
             <span>Рейтинг: 8.5</span>
           </div>
         </li>
-         <li>
+         <li class="card">
           <a href="#">
             <img src="./images/catalog/hotel-2.jpg" alt="Villas at Poco Diablo" width="300" height="212">
           </a>
@@ -186,7 +187,7 @@
             <span>Рейтинг: 9,2</span>
           </div>
         </li>
-         <li>
+         <li class="card">
           <a href="#">
             <img src="./images/catalog/hotel-3.jpg" alt="Desert Quail Inn" width="300" height="212">
           </a>
@@ -206,7 +207,7 @@
             <span>Рейтинг: 6,9</span>
           </div>
         </li>
-         <li>
+         <li class="card">
           <a href="#">
             <img src="./images/catalog/hotel-4.jpg" alt="GreenTree Inn" width="300" height="212">
           </a>
@@ -232,30 +233,30 @@
           <a class="pagination-link" href="#">1</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link button-blue" href="#">2</a>
+          <a class="pagination-link" href="#">2</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link button-blue" href="#">3</a>
+          <a class="pagination-link" href="#">3</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link button-blue" href="#">4</a>
+          <a class="pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">...</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link button-blue" href="#">10</a>
+          <a class="pagination-link" href="#">10</a>
         </li>
       </ul>
     </section>
 
     <section class="subscribe" data-test="subscribe">
-        <h2 class="font-main-title">Подпишитесь на рассылку</h2>
+        <h2 class="font-section-heading">Подпишитесь на рассылку</h2>
         <p class="font-main-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form method="post" action="https://echo.htmlacademy.ru/">
+        <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
           <input type="email" name="subscribe" id="subscribe-input">
           <label for="subscribe-input">Ваш e-mail</label>
-          <button class="button button-blue" type="submit">Подписаться</button>
+          <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
         </form>
     </section>
   </main>
