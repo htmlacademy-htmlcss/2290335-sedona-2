@@ -53,6 +53,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   background-color: var(---global-grey);
+  margin: 0;
 }
 
 .global-container {
@@ -82,8 +83,8 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0 auto;
   text-align: center;
+  margin: 0;
 }
 
 .subscribe_with .font-section-heading {
@@ -92,21 +93,23 @@ body {
 
 .subscribe-button {
   min-width: 232px;
-  min-height: 52px;
+  height: 52px;
 }
 
 .font-main-subtitle {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0;
 }
 
 .font-mini-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
   margin: 0;
 }
 
@@ -125,6 +128,7 @@ body {
   font-weight: 700;
   box-sizing: border-box;
   font-family: inherit;
+  white-space: nowrap;
 }
 
 .button_brown {
@@ -150,15 +154,17 @@ body {
 
 /* index.html HERO */
 
-.hero {
+/* .hero {
   margin-bottom: 69px;
-}
+} */
 
 .advantages-title {
+  padding: 69px 290px 0 290px;
   margin-bottom: 25px;
 }
 
 .advantages-subtitle {
+  padding: 0 274px 0 274px;
   margin-bottom: 90px;
 }
 
@@ -178,12 +184,7 @@ body {
 
 /* index.html ADVANTAGES */
 
-.advantages {
-  margin-bottom: 64px;
-}
-
 .advantages-item__title {
-  text-transform: uppercase;
   margin: 112px auto 62px auto;
   width: 175px;
   height: 56px;
@@ -231,16 +232,14 @@ body {
 
 /* index.html SERVICE */
 
-.service {
-  margin-bottom: 96px;
-}
-
 .service-title {
   margin-bottom: 20px;
+  padding: 96px 247px 0 247px;
 }
 
 .service-subtitle {
   margin-bottom: 64px;
+  padding: 0 355px 0 355px;
 }
 
 .service-list {
@@ -271,6 +270,7 @@ body {
   display: block;
   width: 75px;
   height: 72px;
+  background-size: contain;
 }
 
 .service-house::before {
@@ -283,18 +283,23 @@ body {
 
 .service-gift::before {
   background: url('../images/index/gift-icon.svg') center no-repeat;
+  height: 76px;
+}
+
+.service-name {
+  color: var(--basic-extra-dark);
 }
 
 .service-description {
   margin: 0;
   max-width: 230px;
-  max-height: 63px;
+  text-align: center;
 }
 
 /* index.html SEARCH */
 
 .search {
-  margin-bottom: 96px;
+  padding: 96px 304px 96px 304px;
 }
 
 .search-title {
@@ -306,15 +311,19 @@ body {
 }
 
 .search-button {
-  width: 376px;
+  min-width: 376px;
   height: 52px;
   margin: 0 auto;
 }
 
 /* SUBSCRIBE */
 
+.subscribe {
+  padding: 96px 258px 104px 258px;
+}
+
 .subscribe-title {
-  padding-top: 96px;
+  /* padding: 96px 398px 0 398px; */
   margin-bottom: 20px;
 }
 
@@ -340,14 +349,14 @@ body {
 /* HEADER */
 
 .header-button {
-  width: 160px;
+  min-width: 160px;
   height: 36px;
-  margin-right: 70px;
 }
 
 .header-navigation {
   display: flex;
   align-items: center;
+  padding: 0 70px 0 70px;
 }
 
 .sedona-logo {
@@ -508,11 +517,8 @@ body {
 .toolbar {
   display: flex;
   height: 48px;
-  justify-content: space-between;
   align-items: center;
-  padding-left: 70px;
-  padding-right: 70px;
-  margin-bottom: 40px;
+  padding: 50px 70px 40px 70px;
 }
 
 .toolbar-result {
@@ -528,7 +534,6 @@ body {
   background: url('../images/catalog/filter-background.jpg') center no-repeat;
   background-size: cover;
   color: var(--total-white);
-  margin-bottom: 50px;
 }
 
 .catalog-form {
@@ -551,7 +556,7 @@ body {
 }
 
 .filter-submit-button, .filter-reset-button {
-  width: 191px;
+  min-width: 191px;
   height: 36px;
 }
 
@@ -591,6 +596,8 @@ body {
 
 .filter-select {
   font-family: inherit;
+  margin-right: 70px;
+  margin-left: auto;
 }
 
 .filter-legend {
@@ -613,7 +620,6 @@ body {
   min-width: 200px;
 }
 
-
 /* catalog.html CATALOG*/
 
 .vision-list {
@@ -621,6 +627,7 @@ body {
   gap: 8px;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 .vision-link {
@@ -650,8 +657,7 @@ body {
 .cards-list {
  list-style-type: none;
  margin: 0;
- padding: 0;
- padding-left: 70px;
+ padding: 0 70px 0 70px;
  display: flex;
  flex-wrap: wrap;
  gap: 20px;
@@ -707,21 +713,21 @@ body {
   padding: 70px;
 }
 
-.pagination-item {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--basic-normal-blue);
-}
-
 .pagination-link {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: block;
+  box-sizing: border-box;
   text-decoration: none;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   color: var(--total-white);
+  background-color: var(--basic-normal-blue);
+  min-width: 60px;
+  padding: 12px 10px;
 }
 
 .pagination-item_current {
