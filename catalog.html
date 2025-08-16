@@ -14,17 +14,19 @@
             <a class="sedona-logo" href="./index.html">
               <img src="./images/sedona-logo.svg" alt="Логотип города Седона" width="138" height="64">
             </a>
+
             <ul class="navigation-list">
-              <li>
+              <li class="navigation-item">
                 <a class="navigation-link" href="./index.html">Главная</a>
               </li>
-              <li>
+              <li class="navigation-item">
                 <a class="navigation-link" href="#">О Седоне</a>
               </li>
-              <li>
-                <a class="navigation-link" href="#">Гостиницы</a>
+              <li class="navigation-item">
+                <a class="navigation-link navigation-link_current" href="#">Гостиницы</a>
               </li>
             </ul>
+
             <ul class="user-list">
               <li>
                 <a class="glass-link user-link" href="./catalog.html">
@@ -140,7 +142,7 @@
           </select>
           <ul class="vision-list">
             <li>
-              <a class="vision-link tile-link vision-link_active" href="catalog.html?view=tile">
+              <a class="vision-link tile-link" href="catalog.html?view=tile">
                 <span class="visually-hidden">Плитка</span>
               </a>
             </li>
@@ -174,8 +176,8 @@
               <button class="button button_blue like-button" type="button">в избранное</button>
             </div>
             <div class="card-rating">
-              <span></span>
-              <span class="card-rating__text">Рейтинг: 8.5</span>
+              <div class="card-rating__stars card-rating__stars_four"></div>
+              <div class="card-rating__text">Рейтинг: 8.5</div>
             </div>
           </li>
           <li class="card">
@@ -194,8 +196,8 @@
               <button class="button button_green like-button" type="button">в избранном</button>
             </div>
             <div class="card-rating">
-              <span></span>
-              <span class="card-rating__text">Рейтинг: 9,2</span>
+              <div class="card-rating__stars card-rating__stars_four"></div>
+              <div class="card-rating__text">Рейтинг: 9,2</div>
             </div>
           </li>
           <li class="card">
@@ -214,8 +216,8 @@
               <button class="button button_blue like-button" type="button">в избранное</button>
             </div>
             <div class="card-rating">
-              <span></span>
-              <span class="card-rating__text">Рейтинг: 6,9</span>
+              <div class="card-rating__stars card-rating__stars_three"></div>
+              <div class="card-rating__text">Рейтинг: 6,9</div>
             </div>
           </li>
           <li class="card">
@@ -234,8 +236,8 @@
               <button class="button button_blue like-button" type="button">в избранное</button>
             </div>
             <div class="card-rating">
-              <span></span>
-              <span class="card-rating__text">Рейтинг: 5,0</span>
+              <div class="card-rating__stars card-rating__stars_two"></div>
+              <div class="card-rating__text">Рейтинг: 5,0</div>
             </div>
           </li>
         </ul>
@@ -295,7 +297,7 @@
         <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <a class="developer-logo" href="https://htmlacademy.ru/study" target="_blank" rel="noreferrer noopener">
-        <img src="./images/developer-logo.svg" alt="Сайт разработчика" width="115" height="33">
+        <img class="developer-logo__image" alt="Сайт разработчика" width="115" height="33">
       </a>
     </footer>
   </div>
