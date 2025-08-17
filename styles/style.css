@@ -100,11 +100,6 @@ body {
   color: var(--total-white);
 }
 
-.subscribe-button {
-  min-width: 232px;
-  height: 52px;
-}
-
 .font-main-subtitle {
   font-weight: 400;
   font-size: 22px;
@@ -383,21 +378,38 @@ body {
 }
 
 .subscribe-input {
+  box-sizing: border-box;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  padding: 12px 20px;
+  height: 52px;
+  line-height: 24px;
 }
 
 .subscribe-control {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
   color: var(--basic-extra-dark);
   align-self: center;
+  justify-self: start;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding-inline: 20px;
+  font-size: 18px;
+  /* line-height: 1.33; */
+  opacity: 0.6;
 }
 
 .subscribe_with {
   background: url('../images/subscribe-background.jpg') center no-repeat;
   background-size: cover;
   color: var(--total-white);
+}
+
+.subscribe-button {
+  min-width: 232px;
+  height: 52px;
+  border-radius: 0 4px 4px 0;
 }
 
 /* HEADER */
@@ -462,21 +474,30 @@ body {
   align-self: center;
 }
 
+.user-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
 .user-link::before {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
+  position: relative;
+  inset: 0;
+  background-color: var(--basic-extra-dark);
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.user-link:hover::before {
+  background-color: var(--basic-normal-green);
 }
 
 .glass-link {
-  display: block;
-  min-width: 20px;
   padding: 22px 12px 22px 12px
-}
-
-.glass-link::before {
-  background: url("../images/search-icon.svg");
 }
 
 .heart-link {
@@ -487,18 +508,19 @@ body {
   padding: 12px 7px 22px 7px;
 }
 
+.glass-link::before {
+  mask-image: url("../images/search-icon.svg");
+}
+
 .heart-link::before {
-  background: url("../images/heart-icon.svg");
+  mask-image: url("../images/heart-icon.svg");
   grid-row: 2 / -1;
   grid-column: 1 / 3;
 }
 
-.user-link {
-  text-decoration: none;
-}
-
 .favorite-bandage {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 20px;
@@ -583,14 +605,22 @@ body {
 .developer-logo {
   display: block;
   text-decoration: none;
-  /* background-color: var(--basic-extra-dark); */
-  background-color: yellow;
-  position: relative;
+  /* position: relative; */
   width: 115px;
   height: 33px;
 }
 
 .developer-logo__image {
+  fill: var(--basic-extra-dark);
+}
+.developer-logo__image:hover, .developer-logo__image:focus {
+  fill: var(--link-brown-active);
+}
+.developer-logo__image:active {
+  fill: var(--link-brown-soft);
+}
+
+/* .developer-logo__image {
   mask-image: url("../images/vk-social-icon.svg");
   position: absolute;
   inset: 0;
@@ -598,7 +628,7 @@ body {
   mask-repeat: no-repeat;
   mask-size: contain;
 
-}
+} */
 
 /* .developer-logo__image:hover {
   background-color: green;
