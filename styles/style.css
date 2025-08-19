@@ -241,6 +241,7 @@ body {
 .advantages-item {
   min-height: 385px;
   width: 400px;
+  /* padding: 0 85px 0 85px; */
   text-align: center;
   background-color: var(---basic-palm-soft);
   color: var(--basic-extra-dark);
@@ -261,6 +262,19 @@ body {
   color: var(--total-white);
 }
 
+.advantages-item_big:last-child {
+  flex-direction: row-reverse;
+}
+
+.advantages-item_big .advantages-item__title {
+  margin-top: 102px;
+}
+
+.advantages-item__image {
+  max-width: 100%;
+  height: auto;
+}
+
 .advantages-item_active {
   background-color: var(--basic-palm-soft1);
 }
@@ -269,7 +283,7 @@ body {
 
 .service-title {
   margin-bottom: 20px;
-  padding: 96px 247px 0 247px;
+  padding: 64px 347px 0 347px;
 }
 
 .service-subtitle {
@@ -291,8 +305,7 @@ body {
   align-items: center;
   gap: 30px;
   text-align: center;
-  width: 400px;
-  min-height: 385px;
+  padding: 79px 85px 79px 85px;
   background-color: var(---basic-palm-soft);
 }
 
@@ -425,7 +438,16 @@ body {
 }
 
 .sedona-logo {
+  display: block;
+  width: 138px;
+  min-height: 64px;
   margin-right: 30px;
+  position: relative;
+}
+
+.sedona-logo > img {
+  position: absolute;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -433,6 +455,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-right: 285px;
 }
 
 .navigation-link {
@@ -464,8 +487,8 @@ body {
   display: flex;
   list-style-type: none;
   margin: 0;
-  margin-left: auto;
   padding: 0;
+  margin-right: 20px;
 }
 
 .user-list > li:first-child {
@@ -504,6 +527,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   box-sizing: border-box;
   padding: 12px 7px 22px 7px;
+  transform: translateX(5px);
 }
 
 .glass-link::before {
@@ -539,6 +563,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 40px 70px 30px 70px;
+  min-height: 50px;
 }
 
 .social-list {
