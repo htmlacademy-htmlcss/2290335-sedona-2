@@ -11,7 +11,7 @@
       <header class="header" data-test="header">
       <nav class="header-navigation">
 
-        <a class="sedona-logo" href="#">
+        <a class="sedona-logo" href="./index.html">
           <img src="./images/sedona-logo.svg" alt="Логотип города Седона" width="138" height="70">
         </a>
 
@@ -113,7 +113,7 @@
         <section class="search" data-test="search">
           <h2 class="search-title font-section-heading">Заинтересовались?</h2>
           <p class="search-subtitle font-main-subtitle">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="button button_brown search-button button_big" href="./modal.html">Поиск гостиницы в Седоне</a>
+          <a class="button button_brown search-button button_big" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
         <section class="subscribe subscribe_with" data-test="subscribe">
@@ -155,6 +155,55 @@
         </a>
       </footer>
 
+      <div class="modal-container">
+        <div class="modal modal-search">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+             <div class="modal-inform arriving">
+              <label class="arriving-label font-modal-title" for="arriving-input">Дата Заезда</label>
+              <input class="schedule-input arriving-input font-modal-input" type="date" id="arriving-input">
+              <label class="font-modal-input" for="arriving-input">27 апреля 2020</label>
+             </div>
+             <p class="arriving-message font-modal-text">Мы не можем отправить вас в прошлое.</p>
+
+             <div class="modal-inform departure">
+              <label class="departure-label font-modal-title" for="departure-input">Дата Выезда</label>
+              <input class="schedule-input departure-input font-modal-input" type="date" id="departure-input">
+              <label class="font-modal-input" for="departure-input">1 сентября 2023</label>
+             </div>
+             <p class="departure-message font-modal-text">На эти даты есть свободные номера. Пока есть.</p>
+
+            <div class="number-visitors">
+
+                <label class="adults-label font-modal-title" for="adults-input">Взрослые:</label>
+                <div class="visitors-control">
+                  <input class="age-input font-modal-input" id="adults-input" type="number" value="2">
+                  <button class="age-button age-minus">-</button>
+                  <button class="age-button age-plus">+</button>
+                </div>
+
+                <span class="tooltip-wrapper">
+                  <label class="children-label font-modal-title" for="children-input">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button"></button>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="visitors-control">
+                  <input class="age-input font-modal-input" id="children-input" type="number" value="2">
+                  <button class="age-button age-minus">-</button>
+                  <button class="age-button age-plus">+</button>
+                </div>
+
+            </div>
+            <button class="button button_big button_blue modal-submit-button">Найти</button>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
