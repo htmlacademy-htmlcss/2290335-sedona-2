@@ -1205,7 +1205,7 @@ body {
 .modal-content {
   padding: 64px 70px 64px 70px;
   display: grid;
-  grid-template-columns: 137px 1fr;
+  grid-template-columns: 137px 440px;
   grid-template-rows: 36px 64px repeat(6, 48px) 60px;
   color: var(--basic-extra-dark);
 }
@@ -1225,24 +1225,32 @@ body {
   cursor: pointer;
 }
 
-.modal-inform {
+.flight {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
 
+.flight::after {
+  content: "";
+  display: block;
+  background: url(../images/calendar.svg) center no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 14px;
+  right: 0;
+}
+
 .schedule-input {
   box-sizing: border-box;
   width: 440px;
   height: 48px;
+  padding-left: 20px;
   padding-right: 17px;
   background-color: var(---global-grey);
   border: none;
-}
-
-.schedule-input:not(:focus):not([value]) {
-  color: transparent;
 }
 
 .arriving {
@@ -1276,23 +1284,23 @@ body {
   grid-column: 1/-1;
 }
 
-.number-visitors {
+.modal-age {
   grid-row: 7 / 8;
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.visitors-control {
+.age-control {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.age-buttons {
   display: grid;
   grid-template-columns: 40px 1fr 40px;
-}
-
-.adults-label {
-  margin-right: 46px;
-}
-
-.adults-label + .visitors-control {
-  margin-right: 88px;
 }
 
 .age-input {
