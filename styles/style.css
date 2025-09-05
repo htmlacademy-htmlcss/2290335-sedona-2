@@ -17,6 +17,7 @@
 :root {
   --basic-extra-dark: rgba(0, 0, 0, 1);
   --basic-wallpaper-shadow: rgba(0, 0, 0, 0.2);
+  --extra-dark-soft: rgba(0, 0, 0, 0.3);
   --basic-normal-dark: rgba(51, 51, 51, 1);
   --total-white: rgba(255, 255, 255, 1);
   --total-white-soft: rgba(255, 255, 255, 0.3);
@@ -157,7 +158,7 @@ body {
   box-sizing: border-box;
   font-family: inherit;
   white-space: nowrap;
-  padding: 0;
+  padding: 8px 26px;
 }
 .button:hover {
   cursor: pointer;
@@ -212,6 +213,7 @@ body {
 .button_big {
   font-size: 20px;
   line-height: 36px;
+  padding: 8px 50px;
 }
 
 /* index.html HERO */
@@ -245,7 +247,6 @@ body {
 .advantages-item__title {
   margin: 112px auto 62px auto;
   width: 175px;
-  height: 56px;
 }
 
 .advantages-item__title::after {
@@ -486,11 +487,10 @@ body {
 }
 
 .navigation-list {
-  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right: 285px;
+  display: flex;
 }
 
 .navigation-link {
@@ -530,10 +530,11 @@ body {
 }
 
 .user-list {
-  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  margin-left: auto;
   margin-right: 20px;
 }
 
@@ -674,7 +675,6 @@ body {
 .developer-logo {
   display: block;
   text-decoration: none;
-  /* position: relative; */
   width: 115px;
   height: 33px;
 }
@@ -728,7 +728,6 @@ body {
 
 .toolbar {
   display: flex;
-  height: 48px;
   align-items: center;
   padding: 50px 70px 40px 70px;
 }
@@ -804,6 +803,12 @@ body {
   padding-block: 12px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+
+.cost-input::-webkit-outer-spin-button,
+.cost-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .cost-min {
@@ -884,7 +889,16 @@ body {
   background-repeat: no-repeat;
   background-position: right 16px center;
   appearance: none;
+}
 
+.filter-select:hover,
+.filter-select:focus {
+  border: 2px solid var(--button-green-active);
+}
+
+.filter-select:disabled {
+  border: 2px solid var(--extra-dark-soft);
+  color: var(--extra-dark-soft);
 }
 
 .filter-legend {
@@ -941,7 +955,7 @@ body {
 }
 
 .control-mark:focus {
-  border: solid 3px var(--element-focus);
+  outline: solid 3px var(--element-focus);
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1190,7 +1204,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: var(--grey-smoothy);
@@ -1281,7 +1295,6 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  /* padding: 14px; */
   padding-right: 42px;
   right: 0;
 }
@@ -1295,6 +1308,15 @@ body {
   padding-right: 17px;
   background-color: var(---global-grey);
   border: none;
+}
+
+.schedule-input:hover {
+  background-color: var(---basic-card-border);
+}
+
+.schedule-input:focus {
+  background-color: var(---basic-card-border);
+  outline: 3px solid var(--basic-palm);
 }
 
 .arriving {
@@ -1360,7 +1382,6 @@ body {
   background-color: var(---global-grey);
   border: none;
   color: var(--basic-extra-dark);
-  /* -moz-appearance: textfield; */
 }
 
 .age-input::-webkit-outer-spin-button,
@@ -1379,32 +1400,6 @@ body {
   position: relative;
 }
 
-.age-button::after,  .age-plus::before {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 2px;
-  background-color: var(--basic-soft-brown);
-  position: absolute;
-  left: 25%;
-}
-
-.age-plus::before {
-  transform: rotate(90deg);
-}
-
-.age-button:hover::after, .age-button:hover::before {
-  background-color: var(--basic-extra-dark);
-}
-
-.age-button:focus {
-  border: solid 3px var(--basic-normal-blue);
-}
-
-.age-button:active::after, .age-button:active::before {
-  opacity: 0.3;
-}
-
 .age-minus {
   grid-column: 1/2;
   grid-row: 1/-1;
@@ -1413,6 +1408,23 @@ body {
 .age-plus {
   grid-column: 3/4;
   grid-row: 1/-1;
+}
+
+.age-svg {
+  fill: var(--basic-soft-brown);
+}
+
+.age-svg:hover {
+  fill: var(--basic-extra-dark);
+}
+
+.age-svg:focus {
+  outline: solid 3px var(--basic-normal-blue);
+  border-radius: 4px;
+}
+
+.age-svg:active {
+  opacity: 0.2;
 }
 
 .modal-submit-button {

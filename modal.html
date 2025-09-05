@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Ars longa, vita brevis</title>
+    <title>Модальное окно</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./styles/style.css">
   </head>
@@ -165,13 +165,13 @@
 
               <label class="flight arriving" for="arriving-input">
                 <span class="font-modal-title" >Дата Заезда:</span>
-                <input class="schedule-input arriving-input font-modal-input" type="text" name="arriving-input" value="27 апреля 2020" required id="arriving-input">
+                <input class="schedule-input arriving-input font-modal-input" type="text" name="arriving-input" value="27 апреля 2020" placeholder="Укажите дату" required id="arriving-input">
               </label>
               <p class="arriving-message font-modal-text">Мы не можем отправить вас в прошлое.</p>
 
               <label class="flight departure" for="departure-input">
                 <span class="font-modal-title" >Дата Выезда:</span>
-                <input class="schedule-input departure-input font-modal-input" type="text" name="departure-input" value="1 сентября 2023" required id="departure-input">
+                <input class="schedule-input departure-input font-modal-input" type="text" name="departure-input" value="1 сентября 2023" placeholder="Укажите дату" required id="departure-input">
               </label>
               <p class="departure-message font-modal-text">На эти даты есть свободные номера. Пока есть.</p>
 
@@ -181,8 +181,8 @@
                   <div class="font-modal-title">Взрослые:</div>
                   <div class="age-buttons">
                     <input class="age-input font-modal-input"  type="number" value="2" name="adults-input" id="adults-input">
-                    <button type="button" class="age-button age-minus"></button>
-                    <button type="button" class="age-button age-plus"></button>
+                    <button class="age-button age-minus" type="button"></button>
+                    <button class="age-button age-plus" type="button"></button>
                   </div>
                 </label>
 
