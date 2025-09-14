@@ -159,12 +159,17 @@ body {
   font-weight: 700;
   box-sizing: border-box;
   font-family: inherit;
-  white-space: nowrap;
   padding: 8px 26px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .button:hover {
   cursor: pointer;
+}
+
+.button:disabled {
+  background-color: var(---basic-border);
 }
 
 .button_brown {
@@ -223,6 +228,7 @@ body {
 }
 
 .button_big {
+  width: auto;
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
@@ -280,9 +286,14 @@ body {
   background-color: var(--total-white-soft);
 }
 
+.advantages-item_big .advantages-item__subtitle {
+  padding-bottom: 102px;
+}
+
 .advantages-item__subtitle {
   max-width: 230px;
   margin: 0 auto;
+  padding-bottom: 81px;
 }
 
 .advantages-list {
@@ -316,7 +327,7 @@ body {
   color: var(--total-white);
 }
 
-.advantages-item_big:last-child {
+.advantages-item_big:nth-of-type(odd) {
   flex-direction: row-reverse;
 }
 
@@ -329,7 +340,7 @@ body {
   height: auto;
 }
 
-.advantages-item_active {
+.advantages-item:nth-of-type(odd):not(.advantages-item_big) {
   background-color: var(--basic-palm-soft1);
 }
 
@@ -348,6 +359,7 @@ body {
 .service-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
 }
@@ -359,11 +371,13 @@ body {
   align-items: center;
   gap: 30px;
   text-align: center;
+  width: 400px;
+  box-sizing: border-box;
   padding: 79px 85px 79px 85px;
   background-color: var(---basic-palm-soft);
 }
 
-.service-item_active {
+.service-item:nth-of-type(even) {
   background-color: var(--total-white);
 }
 
@@ -481,6 +495,7 @@ body {
 
 .header-button {
   min-width: 160px;
+  max-width: 320px;
   height: 36px;
 }
 
@@ -488,7 +503,6 @@ body {
   display: flex;
   align-items: center;
   padding: 0 70px 0 70px;
-  max-height: 64px;
 }
 
 .sedona-logo {
@@ -508,6 +522,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
 }
 
 .navigation-link {
@@ -518,6 +534,11 @@ body {
   font-size: 20px;
   line-height: 24px;
   padding: 20px 16px 20px 16px;
+  max-width: 150px;
+  max-height: 64px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .navigation-link_current {
@@ -552,8 +573,11 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: 20px;
+  min-width: 88px;
+  max-width: 200px;
 }
 
 .user-list > li:first-child {
@@ -561,9 +585,12 @@ body {
 }
 
 .user-link {
+  text-decoration: none;
   display: block;
   position: relative;
-  text-decoration: none;
+  box-sizing: border-box;
+  width: 44px;
+  height: 64px;
 }
 
 .user-link::before {
@@ -619,6 +646,8 @@ body {
   color: var(--total-white);
   grid-row: 1 / 3;
   grid-column: 2 / 4;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* FOOTER */
@@ -636,6 +665,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  min-width: 141px;
+  max-width: 330px;
 }
 
 .social-link {
@@ -764,7 +796,7 @@ body {
 
 .filter {
   min-width: 1200px;
-  background: var(--grey-purple-green) url("../images/catalog/filter-background.jpg") center no-repeat;
+  background: var(--grey-purple-green) url("../images/catalog/filter-main.jpg") center no-repeat;
   background-size: cover;
   color: var(--total-white);
   box-sizing: border-box;
@@ -791,7 +823,7 @@ body {
 
 .filter-submit-button,
 .filter-reset-button {
-  min-width: 191px;
+  width: 191px;
   height: 36px;
 }
 
@@ -856,6 +888,9 @@ body {
   grid-row: 1 / 2;
   justify-self: end;
   align-self: center;
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .range-scale {
@@ -952,6 +987,9 @@ body {
   font-weight: 700;
   padding: 0;
   margin-bottom: 33px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
 }
 
 .catalog-list {
@@ -1033,16 +1071,22 @@ body {
 
 .control-text {
   grid-column: 2/3;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* catalog.html CATALOG*/
 
 .vision-list {
-  display: flex;
-  gap: 8px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 160px;
+  max-width: 330px;
+  gap: 8px;
 }
 
 .vision-link {
@@ -1132,6 +1176,9 @@ body {
 
 .card-title {
   text-transform: capitalize;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .card-title__feature {
@@ -1142,6 +1189,11 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+
+.card-hotel, .card-price {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .card-buttons {
@@ -1207,6 +1259,8 @@ body {
   line-height: 20px;
   width: 140px;
   min-height: 37px;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 4px;
   transform: translateX(2px);
 }
@@ -1214,6 +1268,7 @@ body {
 .pagination-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 80px 70px 60px 70px;
