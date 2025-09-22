@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Рахим Абдраев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2290335).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Мой сайт: [Проект Седона](https://rakhim92.github.io/2290335-sedona-2/).
 
 ---
 
