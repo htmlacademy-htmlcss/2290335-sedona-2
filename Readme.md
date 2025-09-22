@@ -3,7 +3,7 @@
 * Студент: [Рахим Абдраев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2290335).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 * Мой сайт: [Проект Седона](https://rakhim92.github.io/2290335-sedona-2/).
-
+Комментарий!
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
