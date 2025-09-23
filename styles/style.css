@@ -150,6 +150,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-align: center;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
@@ -218,7 +219,7 @@ body {
 }
 
 .button_transparent:focus {
-  border: solid 3px var(--element-focus);
+  outline: solid 3px var(--element-focus);
 }
 
 .button_transparent:active {
@@ -234,13 +235,13 @@ body {
 /* index.html HERO */
 
 .advantages-title {
-  padding: 69px 290px 0 290px;
+  padding: 69px 288px 0 288px;
   margin-bottom: 25px;
 }
 
 .advantages-subtitle {
-  padding: 0 274px 0 274px;
-  margin-bottom: 90px;
+  padding: 0 274px 90px 274px;
+  word-break: keep-all;
 }
 
 .hero {
@@ -249,7 +250,7 @@ body {
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
   background-position: center bottom, center top;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--grey-black-interesting);
   color: rgb(0, 0, 0);
   text-align: center;
 }
@@ -293,6 +294,10 @@ body {
   padding-bottom: 81px;
 }
 
+.advantages-item:not(.advantages-item_big) .advantages-item__subtitle {
+  color: var(--basic-normal-dark);
+}
+
 .advantages-list {
   list-style-type: none;
   display: flex;
@@ -324,7 +329,7 @@ body {
   color: var(--total-white);
 }
 
-.advantages-item_big:nth-of-type(odd) {
+.advantages-item_big:last-child {
   flex-direction: row-reverse;
 }
 
@@ -521,6 +526,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   min-width: 339px;
+  max-width: 600px;
 }
 
 .navigation-link {
@@ -748,6 +754,7 @@ body {
 .breadcrumbs-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: start;
   gap: 10px;
   padding: 0;
@@ -760,12 +767,8 @@ body {
   gap: 10px;
 }
 
-.breadcrumbs-item:first-child .breadcrumbs-link::before {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: url("../images/catalog/breadcrumbs-item.svg");
+.breadcrumbs-house {
+  fill: var(--total-white);
 }
 
 .breadcrumbs-item:not(:first-child) .breadcrumbs-link::before {
@@ -925,10 +928,6 @@ body {
   outline: solid 3px var(--button-blue-active);
 }
 
-.range-toggle:active {
-  background-color: var(--total-white-soft);
-}
-
 .toggle-min {
   top: -8px;
   left: 0;
@@ -960,12 +959,21 @@ body {
   color: var(--total-white-soft);
 }
 
+.breadcrumbs-house:hover {
+  fill: var(--total-white-medium);
+}
+
+.breadcrumbs-house:active {
+  fill: var(--total-white-soft);
+}
+
 .filter-select {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   background-color: var(--total-white);
+  color: var(--basic-normal-dark);
   border: 2px solid var(---basic-border);
   border-radius: 4px;
   background-image: url("../images/catalog/arrow-down.svg");
@@ -1087,7 +1095,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  min-width: 160px;
+  width: 160px;
   gap: 8px;
   margin-left: auto;
 }
@@ -1189,7 +1197,8 @@ body {
   margin-bottom: 16px;
 }
 
-.card-hotel, .card-price {
+.card-hotel,
+.card-price {
   width: 140px;
   min-height: 21px;
 }
@@ -1326,6 +1335,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--grey-smoothy);
+  overflow: auto;
 }
 
 .modal-container-hidden {
@@ -1403,7 +1413,8 @@ body {
   background-color: var(---basic-card-border);
 }
 
-.modal-close-button:active {
+.modal-close-button:active::before,
+.modal-close-button:active::after {
   opacity: 0.3;
 }
 
