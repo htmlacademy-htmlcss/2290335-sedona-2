@@ -608,6 +608,10 @@ body {
   background-color: var(--basic-normal-green);
 }
 
+.user-link:active::before {
+  background-color: var(--grey-black-interesting);
+}
+
 .glass-link {
   padding: 22px 12px 22px 12px;
 }
